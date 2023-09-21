@@ -13,7 +13,7 @@ Install the library into the `libraries` folder of your Arduino installation or 
 ### Visual Studio Code (VSCode) Installation
 
 1. Install the Arduino CLI extension
-1.1. Open the extensions manager (Ctrl + Shift + X).
+1.1. Open the Extensions manager (Ctrl + Shift + X).
 1.2. Search for Arduino (by Microsoft).
 1.3. Install and enable the extension.
 2. Go to the Arduino user data folder (e.g., c:\Users\YourName\Documents\Arduino\libraries).
@@ -23,22 +23,22 @@ Install the library into the `libraries` folder of your Arduino installation or 
 ### Visual Studio Code (VSCode) + PlatformIO Installation
 
 1. Install the PlatformIO IDE extension
-1.1. Open the extensions manager (Ctrl + Shift + X).
+1.1. Open the Extensions manager (Ctrl + Shift + X).
 1.2. Search for PlatformIO IDE.
 1.3. Install and enable the extension.
 
-#### Install the library locally.
+#### Install the library locally
 1. Create the "libraries" sub-folder in your project folder.
 2. Create the PtvoDataTagLink folder (the library should be linked in every project separately).
 3. Copy everything from the "src" folder in a ZIP archive to the local library folder.
 
-#### Install the library globally.
+#### Install the library globally
 1. Open PlatformIO CLI (Ctrl + Shift + P, search for "PlatformIO Core CLI").
 2. In the console window:
 
 ```pio lib -g install path_to_zip_file```
 
-### Library dependecies
+### Library dependencies
 
 None (uses built-in the "Serial" library).
 
