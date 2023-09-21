@@ -1,0 +1,24 @@
+{
+  "name": "PtvoDataTagLink",
+  "version": "0.1.0",
+  "description": "The PTVO Data Tag Link library is used to send data and commands to external or slave devices, host systems or visualizers.",
+  "keywords": "Ptvo, Data Tag Link, library",
+  "homepage": "https://www.ptvo.info",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ptvoinfo/MLP.git"
+  },
+  "authors": [
+    {
+      "name": "PTVO",
+      "email": "",
+      "url": "https://www.ptvo.info"
+    }
+  ],
+  "license": "LGPL-3.0-only",
+  "frameworks": "arduino",
+  "platforms": "*",
+  "build": {
+    "libLDFMode": "deep"
+  }
+} 
