@@ -55,7 +55,7 @@ namespace PDTL
     PDTL::VariableData m_Variables[MAX_VARIABLES];
 
     // Buffer for data received.
-    char m_achBuffer[32];
+    uint8_t m_achBuffer[32];
 
   public:
     PtvoUartSensor(Stream &rSourceStream = Serial, char chStartOfMessage = PDTL_STREAM_START_SIGN, char chEndOfMessage = PDTL_STREAM_END_SIGN)
