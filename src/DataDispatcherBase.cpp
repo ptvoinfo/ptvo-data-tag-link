@@ -37,68 +37,68 @@ void DataDispatcherBase::Clear()
   m_uLastVariable = 0;
 }
 
-bool DataDispatcherBase::AddVariable(uint8_t uVariableId, uint8_t &rVariable, VariableCallback_t CallbackFunction = NULL)
+bool DataDispatcherBase::AddVariable(uint8_t uVariableId, uint8_t &rVariable, VariableCallback_t CallbackFunction)
 {
   return AddVariable(uVariableId, &rVariable, PDTL_DATA_TYPE_UINT8, ProcessVariable_uint8, CallbackFunction);
 }
 
-bool DataDispatcherBase::AddVariable(uint8_t uVariableId, uint16_t &rVariable, VariableCallback_t CallbackFunction = NULL)
+bool DataDispatcherBase::AddVariable(uint8_t uVariableId, uint16_t &rVariable, VariableCallback_t CallbackFunction)
 {
   return AddVariable(uVariableId, &rVariable, PDTL_DATA_TYPE_UINT16, ProcessVariable_uint16, CallbackFunction);
 }
 
-bool DataDispatcherBase::AddVariable(uint8_t uVariableId, uint32_t &rVariable, VariableCallback_t CallbackFunction = NULL)
+bool DataDispatcherBase::AddVariable(uint8_t uVariableId, uint32_t &rVariable, VariableCallback_t CallbackFunction)
 {
   return AddVariable(uVariableId, &rVariable, PDTL_DATA_TYPE_UINT32, ProcessVariable_uint32, CallbackFunction);
 }
 
 #if defined(ARDUINO_ARCH_ESP8266) || defined(ARDUINO_ARCH_ESP32)
-bool DataDispatcherBase::AddVariable(uint8_t uVariableId, unsigned long &rVariable, VariableCallback_t CallbackFunction = NULL)
+bool DataDispatcherBase::AddVariable(uint8_t uVariableId, unsigned long &rVariable, VariableCallback_t CallbackFunction)
 {
   return AddVariable(uVariableId, &rVariable, PDTL_DATA_TYPE_UINT32, ProcessVariable_uint32, CallbackFunction);
 }
 
-bool DataDispatcherBase::AddVariable(uint8_t uVariableId, long &rVariable, VariableCallback_t CallbackFunction = NULL)
+bool DataDispatcherBase::AddVariable(uint8_t uVariableId, long &rVariable, VariableCallback_t CallbackFunction)
 {
   return AddVariable(uVariableId, &rVariable, PDTL_DATA_TYPE_UINT32, ProcessVariable_int32, CallbackFunction);
 }
 #endif
 
-bool DataDispatcherBase::AddVariable(uint8_t uVariableId, int8_t &rVariable, VariableCallback_t CallbackFunction = NULL)
+bool DataDispatcherBase::AddVariable(uint8_t uVariableId, int8_t &rVariable, VariableCallback_t CallbackFunction)
 {
   return AddVariable(uVariableId, &rVariable, PDTL_DATA_TYPE_INT8, ProcessVariable_int8, CallbackFunction);
 }
 
-bool DataDispatcherBase::AddVariable(uint8_t uVariableId, int16_t &rVariable, VariableCallback_t CallbackFunction = NULL)
+bool DataDispatcherBase::AddVariable(uint8_t uVariableId, int16_t &rVariable, VariableCallback_t CallbackFunction)
 {
   return AddVariable(uVariableId, &rVariable, PDTL_DATA_TYPE_INT16, ProcessVariable_int16, CallbackFunction);
 }
 
-bool DataDispatcherBase::AddVariable(uint8_t uVariableId, int32_t &rVariable, VariableCallback_t CallbackFunction = NULL)
+bool DataDispatcherBase::AddVariable(uint8_t uVariableId, int32_t &rVariable, VariableCallback_t CallbackFunction)
 {
   return AddVariable(uVariableId, &rVariable, PDTL_DATA_TYPE_INT32, ProcessVariable_int32, CallbackFunction);
 }
 
 #if defined(ARDUINO_ARCH_SAMD) || defined(ARDUINO_ARCH_SAM) || defined(CORE_TEENSY)
-bool DataDispatcherBase::AddVariable(uint8_t uVariableId, int &rVariable, VariableCallback_t CallbackFunction = NULL)
+bool DataDispatcherBase::AddVariable(uint8_t uVariableId, int &rVariable, VariableCallback_t CallbackFunction)
 {
   return AddVariable(uVariableId, &rVariable, PDTL_DATA_TYPE_INT32, ProcessVariable_int32, CallbackFunction);
 }
 #endif
 
 #if defined(ARDUINO_ARCH_RP2040)
-bool DataDispatcherBase::AddVariable(uint8_t uVariableId, int &rVariable, VariableCallback_t CallbackFunction = NULL)
+bool DataDispatcherBase::AddVariable(uint8_t uVariableId, int &rVariable, VariableCallback_t CallbackFunction)
 {
   return AddVariable(uVariableId, &rVariable, PDTL_DATA_TYPE_INT32, ProcessVariable_int32, CallbackFunction);
 }
 #endif
 
-bool DataDispatcherBase::AddVariable(uint8_t uVariableId, float &rVariable, VariableCallback_t CallbackFunction = NULL)
+bool DataDispatcherBase::AddVariable(uint8_t uVariableId, float &rVariable, VariableCallback_t CallbackFunction)
 {
   return AddVariable(uVariableId, &rVariable, PDTL_DATA_TYPE_FLOAT, ProcessVariable_float, CallbackFunction);
 }
 
-bool DataDispatcherBase::AddVariable(uint8_t uVariableId, double &rVariable, VariableCallback_t CallbackFunction = NULL)
+bool DataDispatcherBase::AddVariable(uint8_t uVariableId, double &rVariable, VariableCallback_t CallbackFunction)
 {
   return AddVariable(uVariableId, &rVariable, PDTL_DATA_TYPE_DOUBLE, ProcessVariable_double, CallbackFunction);
 }
@@ -115,7 +115,7 @@ VariableData *DataDispatcherBase::FindVariable(uint8_t uVariableId)
   return NULL;
 }
 
-bool DataDispatcherBase::AddVariable(uint8_t uVariableId, char *pchBuffer, uint8_t uMaxBufferSize, VariableCallback_t CallbackFunction = NULL)
+bool DataDispatcherBase::AddVariable(uint8_t uVariableId, char *pchBuffer, uint8_t uMaxBufferSize, VariableCallback_t CallbackFunction)
 {
   VariableData *pVarData = FindVariable(uVariableId);
   if (pVarData == NULL)

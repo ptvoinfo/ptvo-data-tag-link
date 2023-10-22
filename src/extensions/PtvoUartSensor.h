@@ -63,7 +63,14 @@ namespace PDTL
     {
     }
 
-    void SendSysCommand(ESysCommand uCommandId);
-    void SendCommand(uint8_t Endpoint, EEndpointCommand uCommandId);
+    void SendSysCommand(ESysCommand uCommandId)
+    {
+      StreamParser::SendSysCommand((uint8_t)uCommandId);
+    }
+
+    void SendCommand(uint8_t Endpoint, EEndpointCommand uCommandId)
+    {
+        StreamParser::SendCommand(Endpoint, (uint8_t)uCommandId);
+    }    
   };
 }

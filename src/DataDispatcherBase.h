@@ -106,7 +106,10 @@ namespace PDTL
     bool AddVariable(uint8_t uVariableId, float &rVariable, VariableCallback_t CallbackFunction = NULL);
     bool AddVariable(uint8_t uVariableId, double &rVariable, VariableCallback_t CallbackFunction = NULL);
     bool AddVariable(uint8_t uVariableId, char *pchBuffer, uint8_t uMaxBufferSize, VariableCallback_t CallbackFunction = NULL);
-
+#if defined(ARDUINO_ARCH_ESP8266) || defined(ARDUINO_ARCH_ESP32)
+    bool AddVariable(uint8_t uVariableId, unsigned long &rVariable, VariableCallback_t CallbackFunction = NULL);
+    bool AddVariable(uint8_t uVariableId, long &rVariable, VariableCallback_t CallbackFunction = NULL);
+#endif
   protected:
     static bool ProcessVariable_uint8(VariableData &rVariableInfo, uint8_t *buffer, uint8_t bufferSize);
     static bool ProcessVariable_uint16(VariableData &rVariableInfo, uint8_t *buffer, uint8_t bufferSize);
